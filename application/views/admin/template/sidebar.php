@@ -290,7 +290,7 @@
                                                         </li>
                                                         <li><a href="#"><span class="fa fa-cog author-log-ic"></span>Settings</a>
                                                         </li>
-                                                        <li><a href="login.html"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+                                                        <li><a href="<?php echo base_url().'admin/logout'; ?>"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -653,16 +653,16 @@
                                                                             </div>
                                                                         </li>
                                                                         <li>
-                                                                            <div class="checkbox-setting-pro">
-                                                                                <div class="checkbox-title-pro">
-                                                                                    <h2>Offline users</h2>
-                                                                                    <div class="ts-custom-check">
-                                                                                        <div class="onoffswitch">
-                                                                                            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
-                                                                                            <label class="onoffswitch-label" for="example5">
-                                                                                                    <span class="onoffswitch-inner"></span>
-                                                                                                    <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+      <div class="checkbox-setting-pro">
+            <div class="checkbox-title-pro">
+                 <h2>Offline users</h2>
+                    <div class="ts-custom-check">
+                       <div class="onoffswitch">
+<input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+                          <label class="onoffswitch-label" for="example5">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                          </label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>

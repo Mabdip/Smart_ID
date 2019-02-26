@@ -29,23 +29,19 @@
                                                         height: 50px;width:100px;
                                                         float : left;
                                                         text-color:black;
-                                                        margin-left: 230px;margin-bottom:15px;
-                                                        padding: 10px; text-align:center;
+                                                        margin-left: 230px;margin-bottom:15px;margin-top:10px;
+                                                        padding: 15px; text-align:center;
                                                         background-color:red;">
-                                   <h4>Siswa</h4>
+                                   <a href="<?php echo base_url().'register/regis_siswa'; ?>"><h4>Siswa</h4>
                                </div>
                                <div class="btn btn-primary" style="
                                                         height: 50px;width:100px;
                                                         float : left;
-                                                        margin-left: 20px;
-                                                        padding: 10px; text-align:center;
+                                                        margin-left: 20px; margin-top:10px;
+                                                        padding: 15px; text-align:center;
                                                         background-color:red;">
-                                   <h4>Guru</h4>
+                                   <a href="<?php echo base_url().'register/regis_guru'; ?>"><h4>Guru</h4>
                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-success loginbtn">Register</button>
-                                <button class="btn btn-default">Cancel</button>
                             </div>
                         </form>
                     </div>
@@ -53,9 +49,5 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
         </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
-            </div>
-        </div>
+        
     </div>

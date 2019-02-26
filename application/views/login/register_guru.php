@@ -26,20 +26,24 @@
                         <form action="<?php echo base_url().'register'; ?>" id="loginForm" method="post">
                             <div class="row">
                                 <div class="form-group col-lg-12">
-                                    <label>Nama</label>
-                                    <input type="text" name="nama" class="form-control">
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <label>Email</label>
-                                    <input type="email" name="email" class="form-control">
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <label>Alamat</label>
+                                    <label>Username</label>
                                     <input class="form-control">
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Password</label>
                                     <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Repeat Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Email Address</label>
+                                    <input class="form-control">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Repeat Email Address</label>
+                                    <input class="form-control">
                                 </div>
                                 <div class="checkbox col-lg-12">
                                     <input type="checkbox" class="i-checks" checked> Sigh up for our newsletter
