@@ -13,6 +13,13 @@ class Login extends CI_Controller {
 
     public function index() {
         $this->data['title']   = "Welcome";
+        $this->data['content'] = 'login/pilihan_login';
+        $this->load->view('login/template/layout',$this->data);
+    }
+
+    public function login_admin()
+    {
+        $this->data['title']   = "Welcome";
         $this->data['content'] = 'login/login';
         $this->load->view('login/template/layout',$this->data);
     }
@@ -24,7 +31,7 @@ class Login extends CI_Controller {
 
        $where =   array('username' => $username ,
                         'password' => md5($password) );
-       $check = $this->login_m->cek("login", $where)->num_rows();
+       $check = $this->login_m->cek("user", $where)->num_rows();
 
         if($check > 0 )
         {
@@ -38,6 +45,69 @@ class Login extends CI_Controller {
         {
             $this->session->set_flashdata('warning', 'Username atau Password yang anda masukkan salah!');
             redirect('login','refresh');
+        }
+    }
+
+    public function login_siswa()
+    {
+        
+        $this->data['title']   = "Welcome";
+        $this->data['content'] = 'login/login_siswa';
+        $this->load->view('login/template/layout',$this->data);
+    }
+
+    public function auth_siswa()
+    {
+       $Email = $this->input->post('Email');
+       $Password = $this->input->post('Password');
+
+       $where =   array('Email' => $Email ,
+                        'Password' => $Password );
+       $check = $this->login_m->cek_siswa("siswa", $where)->num_rows();
+
+        if($check > 0 )
+        {
+            $data_session  = array('nama' => $Email,
+                                   'status' => "login" );
+
+            $this->session->set_userdata($data_session);
+            redirect('siswa', 'refresh');
+        }
+        else
+        {
+            $this->session->set_flashdata('warning', 'Username atau Password yang anda masukkan salah!');
+            redirect('login/login_siswa','refresh');
+        }
+    }
+
+    public function login_guru()
+    {
+        $this->data['title']   = "Welcome";
+        $this->data['content'] = 'login/login_guru';
+        $this->load->view('login/template/layout',$this->data);
+    }
+
+    public function auth_guru()
+    {
+       $Email = $this->input->post('Email');
+       $Password = $this->input->post('Password');
+
+       $where =   array('Email' => $Email ,
+                        'Password' => $Password );
+       $check = $this->login_m->cek_guru("guru", $where)->num_rows();
+
+        if($check > 0 )
+        {
+            $data_session  = array('nama' => $Email,
+                                   'status' => "login" );
+
+            $this->session->set_userdata($data_session);
+            redirect('profile/disp_guru', 'refresh');
+        }
+        else
+        {
+            $this->session->set_flashdata('warning', 'Username atau Password yang anda masukkan salah!');
+            redirect('login/login_guru','refresh');
         }
     }
 

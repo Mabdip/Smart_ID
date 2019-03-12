@@ -8,6 +8,7 @@ class Admin extends CI_Controller
         
         if($this->session->userdata('status') != 'login')
         {
+                $this->session->set_flashdata('warning', 'Silahkan masukkan username dan password terlebih dahulu!');
                 redirect('login', 'refresh');
         }
         
